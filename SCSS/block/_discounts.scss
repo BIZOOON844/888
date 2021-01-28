@@ -1,0 +1,48 @@
+.discounts{
+    width: 1140px;
+    margin:0 auto ;
+
+    &__title{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__sublink{
+        margin-top: 30px;
+    }
+    
+    &__suptext,
+    &__text{
+        position: absolute;
+        z-index: 5;
+        top:45%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        text-transform: uppercase;
+    }
+    
+    &__link{
+        position: relative;
+        max-height: 260px;
+        &:hover{
+            outline:2px solid rgb(70, 81, 236);
+        }
+    }
+    &__sublink{
+        max-height: 180px;
+    }
+    &__suptext{
+        font-family: 'Lato', sans-serif;
+        @include font(16px, 19px, 400);
+        color:#fff;
+    }
+    
+    &__subtext{
+        margin-top: 10px;
+    }
+    &__text{
+        top:55%;
+        @include font(24px, 29px, 700);
+        color:$pink;
+    }
+}
