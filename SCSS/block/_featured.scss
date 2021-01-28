@@ -1,0 +1,121 @@
+.featured{
+    max-width: 1140px;
+    margin:100px auto 0;
+    text-align: center;
+
+    &__suptext{
+        @include font(30px, 36px, 400);
+        color:$black;
+        margin-bottom: 6px;
+    }
+    
+    &__subtext{
+        @include font(14px, 17px, 400);
+        color: #9F9F9F;
+        letter-spacing: .5px;
+    }
+    
+    &__wrapper{
+        padding-top: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    &__conteiner{
+        display: block;
+        max-width: 360px;
+        max-height: 581px;
+        text-align: left;
+        background-color:$white;
+        margin-bottom: 30px;
+    }
+    
+    &__icon{
+        width: 360px;
+        height: 420px;
+        text-align: center;
+        background-color:#F7E4E2;
+    }
+    
+    &__title{
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height:16px;
+        color: $black;
+        text-align: left;
+        padding: 25px 0 0 18px;
+    }
+    
+    &__text{
+        @include font(14px, 17px, 300);
+        color: #5D5D5D;
+        text-align: left;
+        letter-spacing:.2px ;
+        padding: 13px 8px 0 17px;
+    }
+    
+    &__price{
+        display: inline-block;
+        text-align:end;
+        color:$pink;
+        padding: 18px;
+    }
+}
+
+
+.featured__button{
+    border:1px solid $pink;
+    color:$pink;
+    text-align: center;
+    padding:15px 38px;
+
+    &:hover{
+        color:#fff;
+        background-color:$pink;
+        transition:.3s
+    }
+}
+
+
+/*=========fa=fa=fa===========*/
+.featured__box{
+    position: relative;
+}
+.featured__link{
+    display: block;
+}
+
+.fa{
+    position: absolute;
+    border:1px solid #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 43px;
+    height: 23px;
+    text-align: center;
+    border-radius:8px;
+    margin:auto;
+    color:#fff;
+    opacity: 0;
+    transition:all .3s;
+    z-index: 3;
+}
+
+.featured__link:hover .fa{
+    opacity: 1;
+    transition:all .3s;
+    transform: scale(1.5);
+}
+
+.featured__link:hover:before{
+    position: absolute;
+    content:"";
+    width: 360px;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+    z-index: 3;
+    transition: .3s linear;
+}
