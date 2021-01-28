@@ -1,0 +1,34 @@
+.delivery{
+    height: 341px;
+    background-color:#222224;
+    margin-top: 95px;
+    @include flex;
+    justify-content: space-around;
+}
+
+.deliveri__box{
+    max-width: 360px;
+    max-height: 133px;
+    text-align: center;
+}
+.delivery__link a{
+    color:#fbfbfb;
+
+    &:hover{
+        opacity: .5;
+    }
+}
+
+
+.delivery__link{
+    color:#fbfbfb;
+    margin-top: 24px;
+    @include font(20px, 24px, 400);
+}
+
+.delivery__text{
+    @include font(14px, 17px, 300);
+    color:#fbfbfb;
+    letter-spacing: .3px;
+    margin-top: 16px;
+}
